@@ -1,0 +1,2 @@
+# tesseract
+tesseract cmd wrapper
