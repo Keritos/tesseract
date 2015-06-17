@@ -5,15 +5,16 @@ import (
 	"testing"
 )
 
+var tests = []struct {
+	imgName  string
+	expected string
+}{
+	{"img01.jpg", "37233"},
+	{"img02.jpg", "75526"},
+	{"img03.jpg", "78442"},
+}
+
 func TestReadText(t *testing.T) {
-	tests := []struct {
-		imgName  string
-		expected string
-	}{
-		{"img01.jpg", "37233"},
-		{"img02.jpg", "75526"},
-		{"img03.jpg", "78442"},
-	}
 	for _, data := range tests {
 		f, err := os.Open(data.imgName)
 		if err != nil {
@@ -33,14 +34,6 @@ func TestReadText(t *testing.T) {
 }
 
 func TestReadTextFromFile(t *testing.T) {
-	tests := []struct {
-		imgName  string
-		expected string
-	}{
-		{"img01.jpg", "37233"},
-		{"img02.jpg", "75526"},
-		{"img03.jpg", "78442"},
-	}
 	for _, data := range tests {
 		text, err := ReadTextFromFile(data.imgName)
 		if err != nil {
