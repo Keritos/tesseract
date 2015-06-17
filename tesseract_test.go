@@ -10,9 +10,9 @@ func TestReadText(t *testing.T) {
 		imgName  string
 		expected string
 	}{
-		{"citibet01.jpg", "37233"},
-		{"citibet02.jpg", "75526"},
-		{"citibet03.jpg", "78442"},
+		{"img01.jpg", "37233"},
+		{"img02.jpg", "75526"},
+		{"img03.jpg", "78442"},
 	}
 	for _, data := range tests {
 		f, err := os.Open(data.imgName)
@@ -37,9 +37,9 @@ func TestReadTextFromFile(t *testing.T) {
 		imgName  string
 		expected string
 	}{
-		{"citibet01.jpg", "37233"},
-		{"citibet02.jpg", "75526"},
-		{"citibet03.jpg", "78442"},
+		{"img01.jpg", "37233"},
+		{"img02.jpg", "75526"},
+		{"img03.jpg", "78442"},
 	}
 	for _, data := range tests {
 		text, err := ReadTextFromFile(data.imgName)
